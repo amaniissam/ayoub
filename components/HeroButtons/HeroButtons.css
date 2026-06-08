@@ -1,0 +1,72 @@
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  
+  flex-wrap: wrap;
+  margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+/* Filled / Primary Button */
+.btn-primary {
+  background-color: #38bdf8; /* sky-400 */
+  color: #0c1a2e;
+  border: 2px solid #38bdf8;
+  box-shadow: 0 0 18px rgba(56, 189, 248, 0.45);
+}
+
+.btn-primary:hover {
+  background-color: #0ea5e9; /* sky-500 */
+  border-color: #0ea5e9;
+  box-shadow: 0 0 28px rgba(14, 165, 233, 0.65);
+  transform: translateY(-2px) scale(1.02);
+}
+
+.btn-primary:active {
+  transform: translateY(0) scale(0.99);
+  box-shadow: 0 0 10px rgba(14, 165, 233, 0.4);
+}
+
+/* Outline / Secondary Button */
+.btn-outline {
+  background-color: transparent;
+  color: #38bdf8;
+  border: 2px solid #38bdf8;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.2) inset,
+              0 0 10px rgba(56, 189, 248, 0.15);
+}
+
+.btn-outline:hover {
+  background-color: rgba(56, 189, 248, 0.1);
+  border-color: #7dd3fc; /* sky-300 */
+  color: #7dd3fc;
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.3) inset,
+              0 0 20px rgba(56, 189, 248, 0.25);
+  transform: translateY(-2px) scale(1.02);
+}
+
+.btn-outline:active {
+  transform: translateY(0) scale(0.99);
+}
+
+/* Icon */
+.btn-icon {
+  font-size: 0.9rem;
+  line-height: 1;
+}

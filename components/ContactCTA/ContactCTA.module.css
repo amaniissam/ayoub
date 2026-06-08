@@ -1,0 +1,249 @@
+/* ===========================
+   ContactCTA.module.css
+   Sky blue theme, dark background
+   =========================== */
+
+:root {
+  --sky: #38bdf8;
+  --sky-light: #7dd3fc;
+  --sky-dark: #0ea5e9;
+  --sky-glow: rgba(56, 189, 248, 0.18);
+  --bg: #0a0f1a;
+  --card-bg: #0f1929;
+  --card-border: rgba(56, 189, 248, 0.15);
+  --text-primary: #f0f9ff;
+  --text-muted: #94a3b8;
+  --whatsapp: #25d366;
+  --whatsapp-dark: #1da851;
+}
+
+/* ---- Section ---- */
+.section {
+  position: relative;
+
+  padding: 80px 24px;
+  overflow: hidden;
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+}
+
+
+
+/* ---- Container ---- */
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+/* ---- Heading ---- */
+.headingWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.envelopeIcon {
+  font-size: 1.8rem;
+  color: var(--sky);
+  filter: drop-shadow(0 0 8px var(--sky-dark));
+  flex-shrink: 0;
+}
+
+.heading {
+  font-size: clamp(1.6rem, 4vw, 2.6rem);
+  font-weight: 800;
+  color: var(--sky);
+  margin: 0;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  text-shadow: 0 0 30px rgba(56, 189, 248, 0.35);
+}
+
+/* ---- Subtext ---- */
+.subtext {
+  font-size: clamp(0.95rem, 2vw, 1.05rem);
+  color: var(--text-muted);
+  line-height: 1.7;
+  max-width: 580px;
+  margin: 0;
+}
+
+/* ---- Cards ---- */
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: 36px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  border-color: rgba(56, 189, 248, 0.45);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(56, 189, 248, 0.1);
+}
+
+.cardIcon {
+  font-size: 2rem;
+  color: var(--sky);
+  filter: drop-shadow(0 0 8px var(--sky-dark));
+  line-height: 1;
+}
+
+.cardTitle {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--sky);
+  margin: 0;
+  letter-spacing: 0.01em;
+}
+
+.cardText {
+  font-size: 0.93rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* ---- Buttons ---- */
+.buttonsRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.btnInstagram,
+.btnWhatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-size: 0.97rem;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+  white-space: nowrap;
+}
+
+.btnInstagram {
+  background: linear-gradient(135deg, var(--sky-dark) 0%, var(--sky) 100%);
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(14, 165, 233, 0.4);
+}
+
+.btnInstagram:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(14, 165, 233, 0.55);
+  opacity: 0.93;
+}
+
+.btnWhatsapp {
+  background: linear-gradient(135deg, var(--whatsapp-dark) 0%, var(--whatsapp) 100%);
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.35);
+}
+
+.btnWhatsapp:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(37, 211, 102, 0.5);
+  opacity: 0.93;
+}
+
+.btnIcon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+/* ---- Disclaimer ---- */
+.disclaimer {
+  font-size: 0.82rem;
+  color: #475569;
+  margin: 0;
+  max-width: 420px;
+  line-height: 1.6;
+}
+
+/* ===========================
+   Responsive Breakpoints
+   =========================== */
+
+/* Tablet */
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 20px;
+  }
+
+  .cardsGrid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .heading {
+    font-size: clamp(1.4rem, 5vw, 2rem);
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .section {
+    padding: 48px 16px;
+  }
+
+  .headingWrapper {
+    gap: 10px;
+  }
+
+  .envelopeIcon {
+    font-size: 1.4rem;
+  }
+
+  .card {
+    padding: 28px 20px;
+  }
+
+  .buttonsRow {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .btnInstagram,
+  .btnWhatsapp {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .glowLeft,
+  .glowRight {
+    width: 250px;
+    height: 250px;
+  }
+}
