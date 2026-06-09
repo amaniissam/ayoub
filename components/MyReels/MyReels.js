@@ -4,10 +4,10 @@ import { useState, useRef } from 'react';
 import styles from './MyReels.module.css';
 
 const reels = [
-  { id: 1, youtubeId: 'dQw4w9WgXcQ', title: 'Creative Direction', subtitle: 'Brand Identity' },
-  { id: 2, youtubeId: 'ScMzIvxBSi4', title: 'Motion Design',      subtitle: 'Visual Effects' },
-  { id: 3, youtubeId: 'jNQXAC9IVRw', title: 'Short Film Edit',    subtitle: 'Cinematic Feel' },
-  { id: 4, youtubeId: '9bZkp7q19f0', title: 'Color Grading',      subtitle: 'Post Production' },
+  { id: 1, youtubeId: 'uCo79EffiPs', title: 'Creative Direction', subtitle: 'Brand Identity' },
+  { id: 2, youtubeId: 'CR_G8GMggOI', title: 'Motion Design',      subtitle: 'Visual Effects' },
+  { id: 3, youtubeId: '_dosCaH24-A', title: 'Short Film Edit',    subtitle: 'Cinematic Feel' },
+  { id: 4, youtubeId: 'Gi72Q0VF5e8', title: 'Color Grading',      subtitle: 'Post Production' },
   { id: 5, youtubeId: 'kJQP7kiw5Fk', title: 'Highlight Reel',     subtitle: 'Best Moments' },
 ];
 
