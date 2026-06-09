@@ -86,7 +86,6 @@ export default function MyReels() {
                     allowFullScreen
                     className={styles.iframe}
                   />
-                  <button className={styles.closeBtn} onClick={() => setActiveVideo(null)} aria-label="Close">✕</button>
                 </div>
               ) : (
                 <div className={styles.thumb} onClick={() => setActiveVideo(reel.id)}>
@@ -101,21 +100,6 @@ export default function MyReels() {
                     <span className={styles.avatar}>{reel.id}</span>
                     <span className={styles.badgeName}>Ayoub Edits</span>
                   </div>
-
-                  <button
-                    type="button"
-                    className={styles.playBtn}
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      setActiveVideo(reel.id);
-                    }}
-                    aria-label="Play"
-                  >
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
-                      <circle cx="12" cy="12" r="12" fill="rgba(56,189,248,0.18)" />
-                      <polygon points="9,7 19,12 9,17" fill="#38bdf8" />
-                    </svg>
-                  </button>
 
                   <div className={styles.cardInfo}>
                     <span className={styles.cardTitle}>{reel.title}</span>
