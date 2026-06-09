@@ -172,4 +172,7 @@
     .navbar-container {
     justify-content: space-between;
     }
+    .logo {
+      padding-left: 1rem;
+    }
 }

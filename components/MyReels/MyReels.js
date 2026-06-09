@@ -18,11 +18,23 @@ export default function MyReels() {
   const scroll = (dir) => {
     if (!scrollRef.current) return;
     const track = scrollRef.current;
-    const card = track.querySelector('[data-card]');
-    if (!card) return;
-    const cardWidth = card.getBoundingClientRect().width;
+    const cards = Array.from(track.querySelectorAll('[data-card]'));
+    if (!cards.length) return;
+
     const gap = 20; // must match the gap in CSS
-    track.scrollBy({ left: dir === 'left' ? -(cardWidth + gap) : (cardWidth + gap), behavior: 'smooth' });
+    const cardWidth = cards[0].getBoundingClientRect().width;
+    const currentScrollLeft = track.scrollLeft;
+
+    const closestIndex = cards.reduce((closest, card, idx) => {
+      const diff = Math.abs(card.offsetLeft - currentScrollLeft);
+      return diff < closest.diff ? { idx, diff } : closest;
+    }, { idx: 0, diff: Infinity }).idx;
+
+    const nextIndex = dir === 'left'
+      ? (closestIndex === 0 ? cards.length - 1 : closestIndex - 1)
+      : (closestIndex === cards.length - 1 ? 0 : closestIndex + 1);
+
+    track.scrollTo({ left: cards[nextIndex].offsetLeft, behavior: 'smooth' });
   };
 
   return (

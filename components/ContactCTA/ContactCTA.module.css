@@ -196,6 +196,7 @@
 @media (max-width: 768px) {
   .section {
     padding: 60px 20px;
+    margin-top: -30rem
   }
 
   .cardsGrid {
@@ -214,6 +215,7 @@
 @media (max-width: 480px) {
   .section {
     padding: 48px 16px;
+    margin-bottom: -3rem;
   }
 
   .headingWrapper {

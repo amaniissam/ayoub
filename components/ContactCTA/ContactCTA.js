@@ -10,7 +10,7 @@ export default function ContactCTA() {
       <div className={styles.container}>
         {/* Heading */}
         <div className={styles.headingWrapper}>
-          <span className={styles.envelopeIcon}>✉</span>
+
           <h2 className={styles.heading}>Ready to Create Something Amazing?</h2>
           <span className={styles.envelopeIcon}>✉</span>
         </div>
