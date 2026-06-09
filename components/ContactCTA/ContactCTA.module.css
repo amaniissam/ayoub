@@ -196,7 +196,7 @@
 @media (max-width: 480px) {
   .section {
     padding: 60px 20px;
-    margin-top: -30rem
+    margin-top: -3rem
   }
 
   .cardsGrid {
@@ -216,6 +216,7 @@
   .section {
     padding: 48px 16px;
     margin-bottom: -3rem;
+    margin-top: 3rem;
   }
 
   .headingWrapper {
@@ -243,9 +244,4 @@
     justify-content: center;
   }
 
-  .glowLeft,
-  .glowRight {
-    width: 250px;
-    height: 250px;
-  }
 }
