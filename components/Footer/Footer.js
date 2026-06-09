@@ -13,7 +13,16 @@ export default function Footer() {
         </div>
         <div className={styles.right}>
           <p className={styles.copy}>© 2026 Ayoub Edits. All rights reserved.</p>
-          <p className={styles.dev}>Built by <span>Issam_m00</span></p>
+          <p className={styles.dev}>
+            Built by{" "}
+            <a
+              href="https://www.instagram.com/issam_m00/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Issam_m00
+            </a>
+          </p>
         </div>
       </div>
     </footer>

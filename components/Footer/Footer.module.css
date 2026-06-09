@@ -3,16 +3,20 @@
   font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
 }
 
+/* TOP LINE */
 .topLine {
   height: 1px;
   background: linear-gradient(to right, transparent, #38bdf8, transparent);
   opacity: 0.35;
+  margin-bottom: 10px;
 }
 
+/* CONTAINER */
 .container {
   max-width: 1100px;
   margin: 0 auto;
   padding: 22px 32px;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -20,6 +24,7 @@
   gap: 12px;
 }
 
+/* LOGO */
 .logo {
   display: flex;
   align-items: center;
@@ -43,6 +48,7 @@
   letter-spacing: 0.08em;
 }
 
+/* RIGHT SIDE */
 .right {
   display: flex;
   flex-direction: column;
@@ -56,17 +62,32 @@
   margin: 0;
 }
 
+/* 🔥 FIXED DEV LINK (now works with <a>) */
 .dev {
-  color: #475569;
   font-size: 0.82rem;
   margin: 0;
+  color: #475569; 
 }
 
-.dev span {
+.dev a {
   color: #38bdf8;
   font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s ease;
 }
 
+/* ✨ HOVER EFFECT */
+.dev a:hover {
+  color: #7dd3fc;
+  text-decoration: underline;
+}
+
+/* OPTIONAL: subtle glow on hover */
+.dev a:hover {
+  text-shadow: 0 0 6px rgba(56, 189, 248, 0.4);
+}
+
+/* MOBILE */
 @media (max-width: 540px) {
   .container {
     flex-direction: column;
