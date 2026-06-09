@@ -77,7 +77,7 @@ export default function MyReels() {
 
                   <div className={styles.badge}>
                     <span className={styles.avatar}>{reel.id}</span>
-                    <span className={styles.badgeName}>Raafat Edits</span>
+                    <span className={styles.badgeName}>Ayoub Edits</span>
                   </div>
 
                   <button className={styles.playBtn} aria-label="Play">
