@@ -21,9 +21,19 @@ export default function MyReels() {
     const cards = Array.from(track.querySelectorAll('[data-card]'));
     if (!cards.length) return;
 
-    const gap = 20; // must match the gap in CSS
-    const cardWidth = cards[0].getBoundingClientRect().width;
     const currentScrollLeft = track.scrollLeft;
+    const maxScrollLeft = track.scrollWidth - track.clientWidth;
+    const threshold = 12;
+
+    if (dir === 'left' && currentScrollLeft <= threshold) {
+      track.scrollTo({ left: maxScrollLeft, behavior: 'smooth' });
+      return;
+    }
+
+    if (dir === 'right' && currentScrollLeft >= maxScrollLeft - threshold) {
+      track.scrollTo({ left: 0, behavior: 'smooth' });
+      return;
+    }
 
     const closestIndex = cards.reduce((closest, card, idx) => {
       const diff = Math.abs(card.offsetLeft - currentScrollLeft);
@@ -92,7 +102,15 @@ export default function MyReels() {
                     <span className={styles.badgeName}>Ayoub Edits</span>
                   </div>
 
-                  <button className={styles.playBtn} aria-label="Play">
+                  <button
+                    type="button"
+                    className={styles.playBtn}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setActiveVideo(reel.id);
+                    }}
+                    aria-label="Play"
+                  >
                     <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
                       <circle cx="12" cy="12" r="12" fill="rgba(56,189,248,0.18)" />
                       <polygon points="9,7 19,12 9,17" fill="#38bdf8" />
